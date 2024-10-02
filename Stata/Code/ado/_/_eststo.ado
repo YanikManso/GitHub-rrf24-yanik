@@ -4,6 +4,7 @@ program define _eststo, byable(onecall)
     local caller : di _caller()
     version 8.2
     if "`_byvars'"!="" local by "by `_byvars'`_byrc0' : "
+    if inlist(`"`1'"',"clear","dir","drop") {
         version `caller': `by'eststo `0'
     }
     else {
