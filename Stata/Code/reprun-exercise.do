@@ -165,7 +165,7 @@ estadd local clustering "Yes"
 
 * Export results
 esttab 	model1 model2 model3 ///
-		using "$outputs/regressions.tex" , ///
+		using "$outputs/regressions_reprun.tex" , ///
 		label ///
 		b(%9.3f) se(%9.3f) ///
 		nomtitles ///
