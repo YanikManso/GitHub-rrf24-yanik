@@ -15,6 +15,10 @@
 		global github 	"C:\Users\yanik.manso\Documents\GitHub\GitHub-rrf24-yanik"
     }
 	
+		if "`c(username)'" == "wb584146" {
+        global onedrive "C:\Users\wb584146\OneDrive - WBG\recover\OneDrive - WBG\Documents\Personal\RRF\RRF - public\Course Materials\DataWork"
+		global github 	"C:\Users\wb584146\GitHub\rrf_github_brm"
+    }
 	
 	* Set globals for sub-folders 
 	global data 	"${onedrive}/Data"
@@ -24,7 +28,7 @@
 	sysdir set PLUS "${code}/ado"
 
 
-	/* Install packages  
+	* Install packages  
 	local user_commands	ietoolkit iefieldkit winsor sumstats estout keeporder grc1leg2 //Add required user-written commands
 
 	foreach command of local user_commands {
@@ -33,7 +37,7 @@
 		   ssc install `command'
 	   }
 	}
-*/ 
+
 
 	* Run do files 
 	* Switch to 0/1 to not-run/run do-files 
@@ -41,4 +45,8 @@
     if (1) do "${code}/02-constructing-data.do"
     if (1) do "${code}/03-analyzing-data.do"
 
+	
+	lint "${code}/03-analyzing-data.do"
+
+	
 * End of do-file!	

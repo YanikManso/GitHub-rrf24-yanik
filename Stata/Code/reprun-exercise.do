@@ -5,10 +5,11 @@ Code for Advanced Applications in Stata: Tools for Reproducible Research
 
 * Update folder path to the raw dataset and add a folder that for outputs that 
 * so that it can be tracked via Github 
-if "`c(username)'" == "???" {
-	global onedrive "???/DataWork/Data/Raw"
-	global outputs 	"???/GitHub-rrf-24/Stata/Outputs"
-}
+		if "`c(username)'" == "wb584146" {
+        global onedrive "C:/Users/wb584146/OneDrive - WBG/recover/OneDrive - WBG/Documents/Personal/RRF/RRF - public/Course Materials/DataWork/Data/Raw"
+		global github 	"C:/Users/wb584146/GitHub/rrf_github_brm"
+    }
+	
 
 *-------------------------------------------------------------------------------	
 * Load data
